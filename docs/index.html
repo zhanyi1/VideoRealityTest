@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-<meta property='og:title' content='V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models'/>
-<meta property='og:description' content='V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models'/>
-<meta property='og:url' content='https://oahzxl.github.io/VReasonBench/'/>
+<meta property='og:title' content='Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?' />
+<meta property='og:description' content='Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?' />
+<meta property='og:url' content='https://oahzxl.github.io/VReasonBench/' />
 <meta property='og:image:width' content='1200' />
 <meta property='og:image:height' content='663' />
 <!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
-<meta property="og:type" content='website'/>
+<meta property="og:type" content='website' />
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models">
-  <meta name="keywords" content="V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models">
+  <meta name="description" content="Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?">
+  <meta name="keywords" content="Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models</title>
+  <title>Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?</title>
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/tab_gallery.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
   <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
@@ -36,7 +35,7 @@
   <link rel="stylesheet" href="./static/css/image_card_fader.css">
   <link rel="stylesheet" href="./static/css/image_card_slider.css">
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Patrick+Hand|Google+Sans|Noto+Sans|Castoro|Lato|Open+Sans&effect=shadow-multiple|emboss|3d"> 
+    href="https://fonts.googleapis.com/css?family=Patrick+Hand|Google+Sans|Noto+Sans|Castoro|Lato|Open+Sans&effect=shadow-multiple|emboss|3d">
   <!-- <link rel="icon" href="./static/images/pyramid.png" type="image/x-icon"> -->
   <!-- <link rel="shortcut icon" href="./static/images/pyramid.png" type="image/x-icon"> -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -46,8 +45,7 @@
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/tab_gallery.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -64,32 +62,39 @@
 <style>
   @import url('https://fonts.cdnfonts.com/css/menlo');
 
-  .video-table td, .video-table th {
+  .video-table td,
+  .video-table th {
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 4px;
     padding-right: 4px;
     font-weight: normal;
   }
+
   .first-col {
     width: 7%;
     vertical-align: middle;
   }
+
   .other-col {
     width: 31%;
   }
+
   body {
     font-family: "Lato", sans-serif;
     font-size: 1.1em;
   }
+
   .title.is-3 {
     font-weight: 900;
     font-size: 2.0rem;
   }
+
   .title.is-4 {
     font-weight: 700;
     font-size: 1.7rem;
   }
+
   .custom-emoji {
     width: 1em;
     height: 1em;
@@ -105,14 +110,14 @@
     height: auto;
     border-radius: 5px;
   }
-  
+
   .results-carousel .item {
     margin: 10px;
     overflow: hidden;
     padding: 20px;
     font-size: 0;
   }
-  
+
   .results-carousel video {
     margin: 0;
   }
@@ -179,90 +184,76 @@
       gap: 20px;
     }
   }
-
 </style>
 
 
 <body>
   <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <br><br>
-          <h1 class="title is-2 publication-title" style="font-size: 1.95rem">
-            V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models
-          </h1>
-          
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <br><br>
+            <h1 class="title is-2 publication-title" style="font-size: 1.95rem">
+              Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?
+            </h1>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://yangluo7.github.io/" target="_blank">Yang Luo</a><sup>1*</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://oahzxl.github.io/" target="_blank">Xuanlei Zhao</a><sup>1*</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://baijiong-lin.github.io/" target="_blank">Baijiong Lin</a><sup>2*</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://advocate99.github.io/" target="_blank">Lingting Zhu</a><sup>3</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://github.com/LiyaoTang" target="_blank">Liyao Tang</a><sup>4</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://liuricky.github.io/" target="_blank">Yuqi Liu</a><sup>5</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://www.yingcong.me/" target="_blank">Ying-Cong Chen</a><sup>2</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="http://thesouthfrog.com/about.me/" target="_blank">Shengju Qian</a><sup>6†</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=2Z1GJ50AAAAJ&hl=en" target="_blank">Xin Wang</a><sup>6</sup>,&nbsp;</span>
-            <span class="author-block">
-              <a href="https://www.comp.nus.edu.sg/~youy/" target="_blank">Yang You</a><sup>1</sup>
-            </span>
-          </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>National University of Singapore&nbsp;&nbsp;</span>
-            <span class="author-block"><sup>2</sup>The Hong Kong University of Science and Technology (Guangzhou)&nbsp;&nbsp;</span>
-            <span class="author-block"><sup>3</sup>The University of Hong Kong&nbsp;&nbsp;</span>
-            <span class="author-block"><sup>4</sup>The University of Sydney</span>
-            <span class="author-block"><sup>5</sup>The Chinese University of Hong Kong</span>
-            <span class="author-block"><sup>6</sup>LIGHTSPEED&nbsp;&nbsp;</span>
-          </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><span class="author-name">Jiaqi Wang</span><sup>1*</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Jiawei Wu</span><sup>2*</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Yi Zhan</span><sup>1</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Rui Zhao</span><sup>2</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Ming Hu</span><sup>1</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">James Cheng</span><sup>1</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Wei Liu</span><sup>3</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Philip Torr</span><sup>4</sup>,&nbsp;</span>
+              <span class="author-block"><span class="author-name">Kevin Qinghong Lin</span><sup>4</sup></span>
+            </div>
 
-          <!-- <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong (CUHK)&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>2</sup>National University of Singapore (NUS)&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>3</sup>Video Rebirth&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>4</sup>University of Oxford</span>
+            </div>
+
+            <!-- <div class="is-size-5 publication-authors">
             {xuanlei, kai.wang, youy}@comp.nus.edu.sg&nbsp;&nbsp;&nbsp;jin509@purdue.edu
           </div> -->
 
-          <div class="is-size-5 publication-authors">
-            (* indicates equal contribution, † indicates corresponding author)
-          </div>
+            <div class="is-size-5 publication-authors">
+              (* indicates equal contribution, † indicates corresponding author)
+            </div>
 
-          <!-- <div class="is-size-5 publication-venue">
+            <!-- <div class="is-size-5 publication-venue">
             in XXX
           </div> -->
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/yangluo7/V-ReasonBench" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/kokolerk/Video_Reality_Test" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>Code</span>
                   </a>
-              </span>
-              <!-- paper -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2511.16668" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                </span>
+                <!-- paper -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2511.16668v1" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- doc -->
-              <!-- <span class="link-block">
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- doc -->
+                <!-- <span class="link-block">
                 <a href="https://github.com/NUS-HPC-AI-Lab/VideoSys/blob/master/docs/pab.md" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -271,8 +262,8 @@
                   <span>Doc</span>
                   </a>
               </span> -->
-              <!-- twitter -->
-              <!-- <span class="link-block">
+                <!-- twitter -->
+                <!-- <span class="link-block">
                 <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-twitter"></i>
@@ -280,300 +271,347 @@
                   <span>Twitter</span>
                 </a>
               </span> -->
-              <!-- bibtex -->
-              <span class="link-block">
-                <a href="#bibtex"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <!-- bibtex -->
+                <span class="link-block">
+                  <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="ai ai-obp"></i>
-                  </span>
-                  <span>BibTex</span>
-                </a>
-              </span>
+                    </span>
+                    <span>BibTex</span>
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Abstract</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            We introduce V-ReasonBench, a benchmark designed to assess video reasoning across four key dimensions: structured problem-solving, spatial cognition, pattern-based inference, and physical dynamics. The benchmark is built from both synthetic and real-world image sequences and provides a diverse set of answer-verifiable tasks that are reproducible, scalable, and unambiguous. Evaluations of six state-of-the-art video models reveal clear dimension-wise differences, with strong variation in structured, spatial, pattern-based, and physical reasoning. We further compare video models with strong image models, analyze common hallucination behaviors, and study how video duration affects Chain-of-Frames reasoning. Overall, V-ReasonBench offers a unified and reproducible framework for measuring video reasoning and aims to support the development of models with more reliable, human-aligned reasoning skills.
-          </p>
-        </div>
-        <div style="text-align: center;">
-          <img src="./static/images/pipeline.png" class="interpolation-image" style="width: 100%; height: auto;"/>
-        </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Results of Recent Video Generation Models</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Model-level overall and per-dimension performance on V-ReasonBench. A pass@5 score for each model is calculated within each dimension and presented accordingly (left). Summary of V-ReasonBench performance across video models (right). The figure illustrates how six video generation models perform on 13 reasoning tasks, with scores rescaled within each dimension to enable direct comparison.
-          </p>
-        </div>
-        <div style="text-align: center; display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
-          <img src="./static/images/result1.png" class="interpolation-image" style="width: 48%; height: auto;"/>
-          <img src="./static/images/result2.png" class="interpolation-image" style="width: 55%; height: auto;"/>
-        </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Reasoning Task Coverage and Video Totals</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Overview of reasoning dimensions, tasks, and number of videos in V-ReasonBench. Each instance is an initial–final image pair, with each model generating five videos for pass@5 evaluation.
-          </p>
-        </div>
-        <div style="text-align: center;">
-          <img src="./static/images/statistics.png" class="interpolation-image" style="width: 60%; height: auto;"/>
-        </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Precise and Reliable Evaluation</h2>
-        <div style="text-align: center;">
-          <img src="./static/images/VLM.png" class="interpolation-image" style="width: 90%; height: auto;"/>
-        </div>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Example failure case from several reasoning tasks illustrating the limitations of VLM-based automatic evaluation. Although the underlying rule is simple, the VLM incorrectly assesses the model's output due to difficulties in recognizing small grid cells and fine structural differences.
-          </p>
-        </div>
-        <div style="text-align: center;">
-          <img src="./static/images/human_prefer.png" class="interpolation-image" style="width: 75%; height: auto;"/>
-        </div>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Human–alignment validation of our benchmark's scoring pipeline. Each point compares binary Pass/Unpass decisions from the automatic evaluation with human judgments across four reasoning categories.
-          </p>
-        </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2" style="text-align: center;">Generated Videos -- Structured Problem-Solving: Tic-Tac-Toe</h2>
-    <div class="simulation-grid">
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_ttt.mp4"></video>
-        <p class="simulation-label">Sora-2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_ttt.mp4"></video>
-        <p class="simulation-label">Veo-3.1</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_ttt.mp4"></video>
-        <p class="simulation-label">Hailuo-02</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_ttt.mp4"></video>
-        <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_ttt.mp4"></video>
-        <p class="simulation-label">Vidu-Q2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_ttt.mp4"></video>
-        <p class="simulation-label">Seedance-1.0-Lite</p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">Abstract</h2>
+      <div class="content has-text-justified">
+        <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
+          Recent advances in video generation have produced vivid content that are often indistinguishable from real
+          videos, making AI-generated video detection an emerging societal challenge.
+          Prior AIGC detection benchmarks mostly evaluate video without audio, target broad narrative domains, and focus
+          on classification solely.
+          Yet it remains unclear whether state-of-the-art video generation models can produce immersive, audio-paired
+          videos that reliably deceive humans and VLMs.
+          To this end, we introduce Video Reality Test, an ASMR-sourced video benchmark suite for testing perceptual
+          realism under tight audio–visual coupling, featuring the following dimensions:
+          <b>(i) Immersive ASMR video-audio sources.</b>
+          Built on carefully curated real ASMR videos, the benchmark targets fine-grained action–object interactions
+          with diversity across objects, actions, and backgrounds.
+          <b>(ii) Peer-Review evaluation.</b>
+          An adversarial creator–reviewer protocol where video generation models act as creators aiming to fool
+          reviewers, while VLMs serve as reviewers seeking to identify fakeness.
+          Our experimental findings show:
+          The best creator Veo3.1-Fast even fools most VLMs: the strongest reviewer (Gemini 2.5-Pro) achieves only 56%
+          accuracy (random 50%), far below that of human experts (81.25%).
+          Adding audio improves real–fake discrimination, yet superficial cues such as watermarks can still
+          significantly mislead models.
+          These findings delineate the current boundary of video generation realism and expose limitations of VLMs in
+          perceptual fidelity and audio–visual consistency.
+        </p>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2" style="text-align: center;">Generated Videos -- Spatial Cognition: Color Connection</h2>
-    <div class="simulation-grid">
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_connect.mp4"></video>
-        <p class="simulation-label">Sora-2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_connect.mp4"></video>
-        <p class="simulation-label">Veo-3.1</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_connect.mp4"></video>
-        <p class="simulation-label">Hailuo-02</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_connect.mp4"></video>
-        <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_connect.mp4"></video>
-        <p class="simulation-label">Vidu-Q2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_connect.mp4"></video>
-        <p class="simulation-label">Seedance-1.0-Lite</p>
+    <!-- Figure 1 with margin -->
+    <div class="container is-max-desktop" style="margin-top: 2rem;">
+      <img src="./static/images/figure1.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
+      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+        Figure 1. An overview of Peer-Review framework for ASMR video reality testing. Video generation models
+        (“creators”) attempt to synthesize fake ASMR videos that can fool multimodal reviewers, while
+        video-understanding
+        models (“reviewers”) aim to detect fakes.
+        Leaderboards on both sides highlight which creators deceive the most reviewers and which reviewers identify the
+        most fake videos, revealing a competitive peer-review process between generation and detection.
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2" style="text-align: center;">Generated Videos -- Pattern-based Inference: Rule Following</h2>
-    <div class="simulation-grid">
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_rule.mp4"></video>
-        <p class="simulation-label">Sora-2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_rule.mp4"></video>
-        <p class="simulation-label">Veo-3.1</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_rule.mp4"></video>
-        <p class="simulation-label">Hailuo-02</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_rule.mp4"></video>
-        <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_rule.mp4"></video>
-        <p class="simulation-label">Vidu-Q2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_rule.mp4"></video>
-        <p class="simulation-label">Seedance-1.0-Lite</p>
+    <!-- Figure 2 with margin -->
+    <div class="container is-max-desktop" style="margin-top: 2rem;">
+      <img src="./static/images/figure2.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
+      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+        Figure 2. Illustration of Video Reality Test creation pipeline, encompassing four phases: (i) Popular ASMR
+        videos are manually collected,
+        (ii) Preprocess the raw videos by splitting and removing backgrounds, then extract the first frame, (iii) Get
+        the text description by Gemini-2.5-pro given the video, (iv) Clustering the videos by Qwen3-embedding-4B with
+        maximum silhouette score, and then sampling the representative ones to alleviate class unbalance.
       </div>
     </div>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2" style="text-align: center;">Generated Videos -- Physical Dynamics: Block Sliding</h2>
-    <div class="simulation-grid">
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_block.mp4"></video>
-        <p class="simulation-label">Sora-2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_block.mp4"></video>
-        <p class="simulation-label">Veo-3.1</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_block.mp4"></video>
-        <p class="simulation-label">Hailuo-02</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_block.mp4"></video>
-        <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_block.mp4"></video>
-        <p class="simulation-label">Vidu-Q2</p>
-      </div>
-      <div class="simulation-item">
-        <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_block.mp4"></video>
-        <p class="simulation-label">Seedance-1.0-Lite</p>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">Data Analysis</h2>
+
+      <div class="content has-text-justified">
+        <p style="font-size: 0.95rem; line-height: 1.5;">
+          <b>Video Reality Test</b> comprises 149 real ASMR videos selected from an initial pool
+          of 1,400 candidates. We categorize them into two difficulty levels: <i>easy</i> (49 videos) and <i>hard</i>
+          (100 videos). The video difficulty level is determined by the distinct variances across four key dimensions:
+          <b><i>Time Diversity</i></b>, <b><i>Object Diversity</i></b>, <b><i>Action Diversity</i></b>, and
+          <b><i>Background Diversity</i></b>.
+        </p>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Figure 4 with spacing -->
+    <div class="container is-max-desktop" style="margin-top: 2rem;">
+      <img src="./static/images/figure3.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
+      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+        Figure 3. Detailed analysis of Video Reality Test. (a) Example instances of Video Reality Test across different
+        dimensions. (b) Statistics of the distribution of Video Reality Test on easy and hard levels. (c) Upper: action
+        statistics of Video Reality Test; Bottom: video time distribution and comparison between easy-level and
+        hard-level.
+      </div>
+    </div>
+  </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Reasoning Patterns in Video Generation</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Example from the Seedance-1.0-Lite and Vidu-Q2 models on the Tic-Tac-Toe task. The model introduces additional decorative patterns across the mirrored axis, illustrating its tendency to enrich visual appearance rather than preserve original geometric form.
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <h2 class="title is-2" style="text-align: center;">Experiment Results</h2>
+
+      <img src="./static/images/table1.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
+      <img src="./static/images/table2.png" class="interpolation-image" style="width: 100%; height: auto;" />
+
+      <!-- Q1-1 Card -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <header class="card-header">
+          <p class="card-header-title">
+            Q1-1. Are current VLMs reliable at distinguishing real and generated videos?
           </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            Evaluation of 10 VLMs shows that proprietary models generally outperform open-source ones, with
+            <b>Gemini-2.5-pro</b> performing best and <b>GPT-5</b> next. Overall performance remains limited: <b>the top
+              score is only 68.44, far below humans at 89.11</b>. Most open-source models perform poorly, leaving
+            substantial room for improvement.
+          </div>
         </div>
-        <div style="text-align: center;">
-          <img src="./static/images/reason_pattern.png" class="interpolation-image" style="width: 90%; height: auto;"/>
-        </div>
-  </div>
-</section>
+      </div>
 
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Influence of Duration on Video Reasoning</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Effect of video duration on reasoning outcomes of Sora2 in the Chain-of-Frame setting. Each row compares model generations with different "thinking" durations for tasks such as Sudoku and Rule Following. Although longer durations correspond to longer reasoning processes (4s vs. 8s, 5s vs. 10s), the resulting outputs do not consistently improve.
+      <!-- Q1-2 Card -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <header class="card-header">
+          <p class="card-header-title">
+            Q1-2. Does adding audio improve VLM detection performance?
           </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            Yes. Adding audio increases detection accuracy by roughly 5 points for the Gemini models. This is mainly
+            because current generated audio often misaligns with the video; for example, Sora2 produces human voices
+            rather than continuous ASMR sounds, making inconsistencies more detectable.
+          </div>
         </div>
-        <div style="text-align: center;">
-          <img src="./static/images/CoF_time.png" class="interpolation-image" style="width: 100%; height: auto;"/>
-        </div>
-  </div>
-</section>
+      </div>
 
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Video Models vs. Image Models</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Comparison between Veo-3.1 (video model) and NanoBanana (image model) on Block Sliding (left) and Code Execution (right). Video models leverage the Chain-of-Frames process to simulate intermediate states, enabling stronger performance on tasks that require causal or temporal reasoning, although intermediate transitions may still appear physically inconsistent. Image models provide clean and stable outputs and excel at text-based tasks such as code execution, but their single-frame reasoning limits their ability to capture the underlying physical dynamics.
+      <!-- Q2-1 Card -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <header class="card-header">
+          <p class="card-header-title">
+            Q2-1. Can current video generation models successfully fool VLMs?
           </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            Yes. Generation models are highly effective at misleading VLMs. <b>Veo3.1-Fast</b> performs best, with only
+            <b>12.54% of its videos detected as fake</b>. Some open-source models (e.g., HunyuanVideoI2V, Wan2.2-A14B)
+            even outperform the closed-source Sora2, showing the performance gap between proprietary and open-source
+            models is narrowing.
+          </div>
         </div>
-        <div style="text-align: center;">
-          <img src="./static/images/IvsV.png" class="interpolation-image" style="width: 90%; height: auto;"/>
-        </div>
-  </div>
-</section>
+      </div>
 
-<section class="section">
-  <div class="container is-max-desktop">
-        <h2 class="title is-2" style="text-align: center;">Hallucination in Video Reasoning</h2>
-        <div class="content has-text-justified">
-          <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
-            Examples of hallucinations in the Chain-of-Frame reasoning process. Each row shows a trajectory from input to output, where the final frame is correct but intermediate frames display unrealistic or physically inconsistent transitions.
+      <!-- Q2-2 Card -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <header class="card-header">
+          <p class="card-header-title">
+            Q2-2. What factors affect the realism of generated videos?
           </p>
+        </header>
+        <div class="card-content">
+          <div class="content">
+            Adding audio can increase the likelihood of videos being detected as fake (e.g., Veo3.1-Fast rises from
+            12.54% to 15.05%) due to audio-visual mismatches. Generation type (Image2Video, TextImage2Video) has limited
+            effect, but <b>model scale matters significantly</b>; larger models generally produce more realistic videos,
+            e.g., Wan2.2-A14B outperforms its 5B version.
+          </div>
         </div>
-        <div style="text-align: center;">
-          <img src="./static/images/hallucination.png" class="interpolation-image" style="width: 90%; height: auto;"/>
-        </div>
-  </div>
-</section>
+      </div>
+
+    </div>
+  </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
-    <pre><code>@misc{luo2025vreasonbench,
-      title={V-ReasonBench: Toward Unified Reasoning Benchmark Suite for Video Generation Models}, 
-      author={Yang Luo and Xuanlei Zhao and Baijiong Lin and Lingting Zhu and Liyao Tang and Yuqi Liu and Ying-Cong Chen and Shengju Qian and Xin Wang and Yang You},
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Structured Problem-Solving: Tic-Tac-Toe
+      </h2>
+      <div class="simulation-grid">
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_ttt.mp4"></video>
+          <p class="simulation-label">Sora-2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_ttt.mp4"></video>
+          <p class="simulation-label">Veo-3.1</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_ttt.mp4"></video>
+          <p class="simulation-label">Hailuo-02</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_ttt.mp4"></video>
+          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_ttt.mp4"></video>
+          <p class="simulation-label">Vidu-Q2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_ttt.mp4"></video>
+          <p class="simulation-label">Seedance-1.0-Lite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Spatial Cognition: Color Connection</h2>
+      <div class="simulation-grid">
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_connect.mp4"></video>
+          <p class="simulation-label">Sora-2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_connect.mp4"></video>
+          <p class="simulation-label">Veo-3.1</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto"
+            src="./static/videos/hailuo_connect.mp4"></video>
+          <p class="simulation-label">Hailuo-02</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto"
+            src="./static/videos/kling_connect.mp4"></video>
+          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_connect.mp4"></video>
+          <p class="simulation-label">Vidu-Q2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_connect.mp4"></video>
+          <p class="simulation-label">Seedance-1.0-Lite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Pattern-based Inference: Rule Following
+      </h2>
+      <div class="simulation-grid">
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_rule.mp4"></video>
+          <p class="simulation-label">Sora-2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_rule.mp4"></video>
+          <p class="simulation-label">Veo-3.1</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_rule.mp4"></video>
+          <p class="simulation-label">Hailuo-02</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_rule.mp4"></video>
+          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_rule.mp4"></video>
+          <p class="simulation-label">Vidu-Q2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_rule.mp4"></video>
+          <p class="simulation-label">Seedance-1.0-Lite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Physical Dynamics: Block Sliding</h2>
+      <div class="simulation-grid">
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_block.mp4"></video>
+          <p class="simulation-label">Sora-2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_block.mp4"></video>
+          <p class="simulation-label">Veo-3.1</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_block.mp4"></video>
+          <p class="simulation-label">Hailuo-02</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_block.mp4"></video>
+          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_block.mp4"></video>
+          <p class="simulation-label">Vidu-Q2</p>
+        </div>
+        <div class="simulation-item">
+          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_block.mp4"></video>
+          <p class="simulation-label">Seedance-1.0-Lite</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+      <pre><code>@misc{luo2025vreasonbench,
+      title={Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?}, 
+      author={Jiaqi Wang and Jiawei Wu and Yi Zhan and Rui Zhao and Ming Hu and James Cheng and Wei Liu and Philip Torr and Kevin Qinghong Lin},
       year={2025},
       eprint={2511.16668},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2511.16668}, 
+      url={https://arxiv.org/abs/xxxxxx}, 
 }</code></pre>
-  </div>
-</section>
+    </div>
+  </section>
 
 
-<footer class="footer">
+  <footer class="footer">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
             This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
             Website adapted from the following <a href="https://nerfies.github.io">source code</a>.
@@ -581,13 +619,16 @@
         </div>
       </div>
     </div>
-  </div>
-</footer>
+    </div>
+  </footer>
 
 
-<script src="juxtapose/js/juxtapose.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+  <script src="juxtapose/js/juxtapose.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
