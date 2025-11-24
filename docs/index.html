@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<meta property='og:title' content='Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?' />
-<meta property='og:description' content='Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?' />
-<meta property='og:url' content='https://oahzxl.github.io/VReasonBench/' />
-<meta property='og:image:width' content='1200' />
-<meta property='og:image:height' content='663' />
-<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
-<meta property="og:type" content='website' />
-
 <head>
   <meta charset="utf-8">
+  <meta property='og:title' content='Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?' />
+  <meta property='og:description' content='Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?' />
+  <meta property='og:url' content='https://oahzxl.github.io/VReasonBench/' />
+  <meta property='og:image:width' content='1200' />
+  <meta property='og:image:height' content='663' />
+  <meta property="og:type" content='website' />
   <meta name="description" content="Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?">
   <meta name="keywords" content="Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?</title>
 
+  <!-- 原有引用保持不变 -->
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -36,199 +35,173 @@
   <link rel="stylesheet" href="./static/css/image_card_slider.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Patrick+Hand|Google+Sans|Noto+Sans|Castoro|Lato|Open+Sans&effect=shadow-multiple|emboss|3d">
-  <!-- <link rel="icon" href="./static/images/pyramid.png" type="image/x-icon"> -->
-  <!-- <link rel="shortcut icon" href="./static/images/pyramid.png" type="image/x-icon"> -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/tab_gallery.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <script src="./static/js/magnifier.js"></script>
-  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
-  <link rel="stylesheet" href="./static/css/image_card_fader.css">
-  <link rel="stylesheet" href="./static/css/image_card_slider.css">
 </head>
 
 <style>
   @import url('https://fonts.cdnfonts.com/css/menlo');
 
-  .video-table td,
-  .video-table th {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-    font-weight: normal;
-  }
-
-  .first-col {
-    width: 7%;
-    vertical-align: middle;
-  }
-
-  .other-col {
-    width: 31%;
-  }
-
   body {
     font-family: "Lato", sans-serif;
     font-size: 1.1em;
+    background-color: #f9f9f9;
   }
 
-  .title.is-3 {
-    font-weight: 900;
-    font-size: 2.0rem;
-  }
-
-  .title.is-4 {
+  /* 标题样式 */
+  .title.is-2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
-    font-size: 1.7rem;
+    color: #363636;
   }
 
-  .custom-emoji {
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    background-image: url('./static/images/pyramid.png');
-    background-size: cover;
-    vertical-align: middle;
-    line-height: 1;
+  /* 调整section间距 */
+  .section {
+    padding: 3rem 1.5rem;
   }
 
-  .interpolation-video {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-
-  .results-carousel .item {
-    margin: 10px;
-    overflow: hidden;
-    padding: 20px;
-    font-size: 0;
-  }
-
-  .results-carousel video {
-    margin: 0;
-  }
-
-  /* 修复图片下方的细线间隙 */
   .content img {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* 调整section间距 */
-  .section {
-    padding: 2rem 1.5rem;
+  /* =========================================
+     新版视频展示区样式 (Optimized Video Grid)
+     ========================================= */
+  
+  /* 每一个对比场景作为一个独立的卡片组 */
+  .comparison-group {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 轻微阴影提升质感 */
+    border: 1px solid #eee;
   }
 
-  /* 调整section标题大小 */
-  .title.is-2 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+  /* 场景小标题 */
+  .group-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+    border-left: 4px solid #3273dc; /* 使用 Bulma 的蓝色 */
+    padding-left: 12px;
   }
 
-  /* 视频网格布局 */
-  .simulation-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 2rem;
+  /* Flexbox 容器 */
+  .video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 让少于一行的元素居中显示 */
+    gap: 20px;
   }
 
+  /* 单个视频项 */
   .simulation-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* 默认宽度：适配3列布局 */
+    flex: 0 1 calc(33.333% - 20px); 
+    max-width: 320px; 
+    min-width: 220px;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .simulation-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+
+  /* 针对5个视频的特殊处理 */
+  .group-large .simulation-item {
+    flex: 0 1 calc(20% - 20px); 
+    max-width: 200px; /* 稍微缩小以便排成一行 */
+    min-width: 150px;
   }
 
   .simulation-item video {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: #f5f5f5;
+    display: block;
+    aspect-ratio: 9/16; /* 保持竖屏比例 */
+    object-fit: cover;
   }
 
   .simulation-label {
-    margin-top: 12px;
-    font-size: 1rem;
-    font-weight: 500;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
     text-align: center;
-    color: #333;
+    color: #4a4a4a;
+    background-color: #fff;
+    margin: 0;
+    border-top: 1px solid #f5f5f5;
   }
 
-  /* 响应式设计 */
-  @media screen and (max-width: 1024px) {
-    .simulation-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+  /* 真实视频标签高亮 */
+  .label-real {
+    color: #209cee; /* Bulma info color */
   }
 
+  /* 响应式设计：移动端强制单列 */
   @media screen and (max-width: 768px) {
-    .simulation-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
+    .simulation-item, .group-large .simulation-item {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+    .comparison-group {
+      padding: 15px;
     }
   }
+
+  /* 其他辅助样式 */
+  .author-block { display: inline-block; margin-right: 10px; }
+  .publication-links { margin-top: 20px; }
+  .abstract-text { font-size: 1.1em !important; }
 </style>
 
-
 <body>
+
+  <!-- Hero Section -->
   <section class="hero is-small">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <br><br>
-            <h1 class="title is-2 publication-title" style="font-size: 1.95rem">
+            <h1 class="title is-2 publication-title" style="font-size: 2.2rem">
               Video Reality Test: Can AI-Generated ASMR Videos fool VLMs and Human?
             </h1>
 
-
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><span class="author-name">Jiaqi Wang</span><sup>1*</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Jiawei Wu</span><sup>2*</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Yi Zhan</span><sup>1</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Rui Zhao</span><sup>2</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Ming Hu</span><sup>1</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">James Cheng</span><sup>1</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Wei Liu</span><sup>3</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Philip Torr</span><sup>4</sup>,&nbsp;</span>
-              <span class="author-block"><span class="author-name">Kevin Qinghong Lin</span><sup>4</sup></span>
+              <span class="author-block"><span class="author-name">Jiaqi Wang</span><sup>1*</sup>,</span>
+              <span class="author-block"><span class="author-name">Jiawei Wu</span><sup>2*</sup>,</span>
+              <span class="author-block"><span class="author-name">Yi Zhan</span><sup>1</sup>,</span>
+              <span class="author-block"><span class="author-name">Rui Zhao</span><sup>2</sup>,</span>
+              <span class="author-block"><span class="author-name">Ming Hu</span><sup>1</sup>,</span>
+              <span class="author-block"><span class="author-name">James Cheng</span><sup>1</sup>,</span>
+              <span class="author-block"><span class="author-name">Wei Liu</span><sup>3</sup>,</span>
+              <span class="author-block"><span class="author-name">Philip Torr</span><sup>4</sup>,</span>
+              <span class="author-block"><span class="author-name">Kevin Qinghong Lin</span><sup>4†</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong (CUHK)&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>2</sup>National University of Singapore (NUS)&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>3</sup>Video Rebirth&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong (CUHK)</span>
+              <span class="author-block"><sup>2</sup>National University of Singapore (NUS)</span>
+              <span class="author-block"><sup>3</sup>Video Rebirth</span>
               <span class="author-block"><sup>4</sup>University of Oxford</span>
             </div>
 
-            <!-- <div class="is-size-5 publication-authors">
-            {xuanlei, kai.wang, youy}@comp.nus.edu.sg&nbsp;&nbsp;&nbsp;jin509@purdue.edu
-          </div> -->
-
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-6 publication-authors">
               (* indicates equal contribution, † indicates corresponding author)
             </div>
-
-            <!-- <div class="is-size-5 publication-venue">
-            in XXX
-          </div> -->
 
             <div class="column has-text-centered">
               <div class="publication-links">
@@ -236,9 +209,7 @@
                 <span class="link-block">
                   <a href="https://github.com/kokolerk/Video_Reality_Test" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
+                    <span class="icon"><i class="fab fa-github"></i></span>
                     <span>Code</span>
                   </a>
                 </span>
@@ -246,37 +217,14 @@
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/2511.16668v1" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
                     <span>Paper</span>
                   </a>
                 </span>
-                <!-- doc -->
-                <!-- <span class="link-block">
-                <a href="https://github.com/NUS-HPC-AI-Lab/VideoSys/blob/master/docs/pab.md" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-book"></i>
-                  </span>
-                  <span>Doc</span>
-                  </a>
-              </span> -->
-                <!-- twitter -->
-                <!-- <span class="link-block">
-                <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-twitter"></i>
-                  </span>
-                  <span>Twitter</span>
-                </a>
-              </span> -->
                 <!-- bibtex -->
                 <span class="link-block">
                   <a href="#bibtex" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-obp"></i>
-                    </span>
+                    <span class="icon"><i class="ai ai-obp"></i></span>
                     <span>BibTex</span>
                   </a>
                 </span>
@@ -288,11 +236,12 @@
     </div>
   </section>
 
+  <!-- Abstract Section -->
   <section class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-2" style="text-align: center;">Abstract</h2>
       <div class="content has-text-justified">
-        <p class="abstract-text" style="font-size: 0.95rem; line-height: 1.5;">
+        <p class="abstract-text">
           Recent advances in video generation have produced vivid content that are often indistinguishable from real
           videos, making AI-generated video detection an emerging societal challenge.
           Prior AIGC detection benchmarks mostly evaluate video without audio, target broad narrative domains, and focus
@@ -318,10 +267,10 @@
       </div>
     </div>
 
-    <!-- Figure 1 with margin -->
+    <!-- Figure 1 -->
     <div class="container is-max-desktop" style="margin-top: 2rem;">
       <img src="./static/images/figure1.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
-      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem; text-align: justify;">
         Figure 1. An overview of Peer-Review framework for ASMR video reality testing. Video generation models
         (“creators”) attempt to synthesize fake ASMR videos that can fool multimodal reviewers, while
         video-understanding
@@ -331,10 +280,10 @@
       </div>
     </div>
 
-    <!-- Figure 2 with margin -->
+    <!-- Figure 2 -->
     <div class="container is-max-desktop" style="margin-top: 2rem;">
       <img src="./static/images/figure2.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
-      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem; text-align: justify;">
         Figure 2. Illustration of Video Reality Test creation pipeline, encompassing four phases: (i) Popular ASMR
         videos are manually collected,
         (ii) Preprocess the raw videos by splitting and removing backgrounds, then extract the first frame, (iii) Get
@@ -342,29 +291,23 @@
         maximum silhouette score, and then sampling the representative ones to alleviate class unbalance.
       </div>
     </div>
-
   </section>
 
-
-  <section class="section">
+  <!-- Data Analysis Section -->
+  <section class="section" style="background-color: #f5f5f5;">
     <div class="container is-max-desktop">
       <h2 class="title is-2" style="text-align: center;">Data Analysis</h2>
-
       <div class="content has-text-justified">
-        <p style="font-size: 0.95rem; line-height: 1.5;">
-          <b>Video Reality Test</b> comprises 149 real ASMR videos selected from an initial pool
-          of 1,400 candidates. We categorize them into two difficulty levels: <i>easy</i> (49 videos) and <i>hard</i>
-          (100 videos). The video difficulty level is determined by the distinct variances across four key dimensions:
-          <b><i>Time Diversity</i></b>, <b><i>Object Diversity</i></b>, <b><i>Action Diversity</i></b>, and
-          <b><i>Background Diversity</i></b>.
+        <p style="font-size: 1.1rem;">
+        We release the full ASMR corpus, including real videos, extracted frames, prompts, and outputs from 13 video-generation settings. Each of the 149 scenes provides 1 real clip plus 13 generated variants, enabling fine-grained analysis under identical textual prompts.
         </p>
       </div>
     </div>
 
-    <!-- Figure 4 with spacing -->
+    <!-- Figure 3 -->
     <div class="container is-max-desktop" style="margin-top: 2rem;">
       <img src="./static/images/figure3.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
-      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem;">
+      <div class="figure-caption" style="font-size: 0.9rem; color: #555; margin-top: 0.5rem; text-align: justify;">
         Figure 3. Detailed analysis of Video Reality Test. (a) Example instances of Video Reality Test across different
         dimensions. (b) Statistics of the distribution of Video Reality Test on easy and hard levels. (c) Upper: action
         statistics of Video Reality Test; Bottom: video time distribution and comparison between easy-level and
@@ -373,17 +316,16 @@
     </div>
   </section>
 
-
+  <!-- Experiment Results Section -->
   <section class="section">
     <div class="container is-max-desktop">
-
       <h2 class="title is-2" style="text-align: center;">Experiment Results</h2>
 
-      <img src="./static/images/table1.jpg" class="interpolation-image" style="width: 100%; height: auto;" />
-      <img src="./static/images/table2.png" class="interpolation-image" style="width: 100%; height: auto;" />
+      <img src="./static/images/table1.jpg" class="interpolation-image" style="width: 100%; height: auto; margin-bottom: 20px;" />
+      <img src="./static/images/table2.png" class="interpolation-image" style="width: 100%; height: auto; margin-bottom: 40px;" />
 
       <!-- Q1-1 Card -->
-      <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card" style="margin-bottom: 1.5rem; border-radius: 8px;">
         <header class="card-header">
           <p class="card-header-title">
             Q1-1. Are current VLMs reliable at distinguishing real and generated videos?
@@ -400,7 +342,7 @@
       </div>
 
       <!-- Q1-2 Card -->
-      <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card" style="margin-bottom: 1.5rem; border-radius: 8px;">
         <header class="card-header">
           <p class="card-header-title">
             Q1-2. Does adding audio improve VLM detection performance?
@@ -416,7 +358,7 @@
       </div>
 
       <!-- Q2-1 Card -->
-      <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card" style="margin-bottom: 1.5rem; border-radius: 8px;">
         <header class="card-header">
           <p class="card-header-title">
             Q2-1. Can current video generation models successfully fool VLMs?
@@ -433,7 +375,7 @@
       </div>
 
       <!-- Q2-2 Card -->
-      <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card" style="margin-bottom: 1.5rem; border-radius: 8px;">
         <header class="card-header">
           <p class="card-header-title">
             Q2-2. What factors affect the realism of generated videos?
@@ -448,146 +390,104 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-
-
-  <section class="section">
+  <!-- =========================================
+       UPDATED VIDEO COMPARISON SECTION
+       ========================================= -->
+  <section class="section" style="background-color: #f1f1f1;">
     <div class="container is-max-desktop">
-      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Structured Problem-Solving: Tic-Tac-Toe
-      </h2>
-      <div class="simulation-grid">
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_ttt.mp4"></video>
-          <p class="simulation-label">Sora-2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_ttt.mp4"></video>
-          <p class="simulation-label">Veo-3.1</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_ttt.mp4"></video>
-          <p class="simulation-label">Hailuo-02</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_ttt.mp4"></video>
-          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_ttt.mp4"></video>
-          <p class="simulation-label">Vidu-Q2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_ttt.mp4"></video>
-          <p class="simulation-label">Seedance-1.0-Lite</p>
+      <h2 class="title is-2" style="text-align: center;">Real or Fake: Can You Tell the Difference?</h2>
+      
+      <!-- Group 1 -->
+      <div class="comparison-group">
+        <div class="group-title">Scene 1: Cloth Texture & Physics</div>
+        <div class="video-row">
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake1/real.mp4"></video>
+            <p class="simulation-label label-real">Real</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake1/sora2.mp4"></video>
+            <p class="simulation-label">Sora-2</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake1/veo3.1-fast.mp4"></video>
+            <p class="simulation-label">Veo-3.1-fast</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Spatial Cognition: Color Connection</h2>
-      <div class="simulation-grid">
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_connect.mp4"></video>
-          <p class="simulation-label">Sora-2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_connect.mp4"></video>
-          <p class="simulation-label">Veo-3.1</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto"
-            src="./static/videos/hailuo_connect.mp4"></video>
-          <p class="simulation-label">Hailuo-02</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto"
-            src="./static/videos/kling_connect.mp4"></video>
-          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_connect.mp4"></video>
-          <p class="simulation-label">Vidu-Q2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_connect.mp4"></video>
-          <p class="simulation-label">Seedance-1.0-Lite</p>
+      <!-- Group 2 -->
+      <div class="comparison-group">
+        <div class="group-title">Scene 2: Intricate Carving</div>
+        <div class="video-row">
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake2/real.mp4"></video>
+            <p class="simulation-label label-real">Real</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake2/sora2.mp4"></video>
+            <p class="simulation-label">Sora-2</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake2/veo3.1-fast.mp4"></video>
+            <p class="simulation-label">Veo-3.1-fast</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Pattern-based Inference: Rule Following
-      </h2>
-      <div class="simulation-grid">
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_rule.mp4"></video>
-          <p class="simulation-label">Sora-2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_rule.mp4"></video>
-          <p class="simulation-label">Veo-3.1</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_rule.mp4"></video>
-          <p class="simulation-label">Hailuo-02</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_rule.mp4"></video>
-          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_rule.mp4"></video>
-          <p class="simulation-label">Vidu-Q2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_rule.mp4"></video>
-          <p class="simulation-label">Seedance-1.0-Lite</p>
+      <!-- Group 3 -->
+      <div class="comparison-group">
+        <div class="group-title">Scene 3: Material Deformation (Wood)</div>
+        <div class="video-row">
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake3/real.mp4"></video>
+            <p class="simulation-label label-real">Real</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake3/sora2.mp4"></video>
+            <p class="simulation-label">Sora-2</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake3/veo3.1-fast.mp4"></video>
+            <p class="simulation-label">Veo-3.1-fast</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-2" style="text-align: center;">Generated Videos -- Physical Dynamics: Block Sliding</h2>
-      <div class="simulation-grid">
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/sora_block.mp4"></video>
-          <p class="simulation-label">Sora-2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/veo_block.mp4"></video>
-          <p class="simulation-label">Veo-3.1</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/hailuo_block.mp4"></video>
-          <p class="simulation-label">Hailuo-02</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/kling_block.mp4"></video>
-          <p class="simulation-label">Kling-2.5-Turbo-Pro</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/vidu_block.mp4"></video>
-          <p class="simulation-label">Vidu-Q2</p>
-        </div>
-        <div class="simulation-item">
-          <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/seed_block.mp4"></video>
-          <p class="simulation-label">Seedance-1.0-Lite</p>
+      <!-- Group 4: 5 Videos -->
+      <div class="comparison-group group-large">
+        <div class="group-title">Scene 4: Fine Interactions (Tomato Slicing)</div>
+        <div class="video-row">
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake4/real.mp4"></video>
+            <p class="simulation-label label-real">Real</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake4/sora2.mp4"></video>
+            <p class="simulation-label">Sora-2</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake4/opensora.mp4"></video>
+            <p class="simulation-label">Open Sora</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake4/kling.mp4"></video>
+            <p class="simulation-label">Kling</p>
+          </div>
+          <div class="simulation-item">
+            <video controls loop muted autoplay playsinline preload="auto" src="./static/videos/RealVSFake4/wan-a14b.mp4"></video>
+            <p class="simulation-label">Wan-A14B</p>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
-
-
+  <!-- BibTeX Section -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title"><a id="bibtex">BibTeX</a></h2>
@@ -603,11 +503,11 @@
     </div>
   </section>
 
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content has-text-centered">
           <p>
             This website is licensed under a <a rel="license"
               href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
@@ -619,9 +519,7 @@
         </div>
       </div>
     </div>
-    </div>
   </footer>
-
 
   <script src="juxtapose/js/juxtapose.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
@@ -630,5 +528,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 
 </body>
-
 </html>
